@@ -1,5 +1,7 @@
 # To-Do List
 
+[![Tests](https://github.com/ibuprofano/arionkoder-qa-challenge/actions/workflows/tests.yml/badge.svg)](https://github.com/ibuprofano/arionkoder-qa-challenge/actions/workflows/tests.yml)
+
 A minimal React + TypeScript to-do list app, built with Vite, and its automated Playwright test suite.
 
 ## Requirements
