@@ -1,0 +1,123 @@
+.todo-app {
+  max-width: 480px;
+  margin: 48px auto;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.todo-app h1 {
+  font-size: 28px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+form[data-testid='todo-form'] {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+form[data-testid='todo-form'] input {
+  flex: 1;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+form[data-testid='todo-form'] button {
+  padding: 8px 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  /* Fixed (not theme-dependent) purple - verified >4.5:1 contrast with white text in both themes */
+  background: #9333ea;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul[data-testid='todo-list'] {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  text-align: left;
+}
+
+li[data-testid='todo-item'] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+li[data-testid='todo-item'] label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  cursor: pointer;
+}
+
+li[data-testid='todo-item'] span[data-testid='todo-text'] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+li[data-testid='todo-item'].completed span[data-testid='todo-text'] {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li[data-testid='todo-item'] button[data-testid='todo-delete'] {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+p[data-testid='empty-state'] {
+  padding: 16px 0;
+  opacity: 0.6;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+div[data-testid='filters'] {
+  display: flex;
+  gap: 4px;
+}
+
+div[data-testid='filters'] button {
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+div[data-testid='filters'] button.active {
+  border-color: var(--accent-border);
+}
+
+button[data-testid='clear-completed'] {
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: underline;
+}
