@@ -21,6 +21,12 @@ npm run preview   # preview the production build locally
 
 The suite uses [Playwright Test](https://playwright.dev/) with the Page Object Model pattern (`tests/pages/TodoPage.ts`). It starts the dev server automatically — no need to run `npm run dev` yourself first.
 
+The first time, install the Playwright browser binaries (not included in `npm install`):
+
+```bash
+npx playwright install chromium
+```
+
 ```bash
 npm test                                    # run everything, headless, in parallel, full speed
 npm test -- --headed                        # run everything with a visible browser
