@@ -17,7 +17,7 @@ export class TodoPage {
     this.addButton = page.getByTestId('todo-add-button')
     this.todoItems = page.getByTestId('todo-item')
     this.activeCount = page.getByTestId('active-count')
-    this.clearCompletedButton = page.getByTestId('clear-completed')
+    this.clearCompletedButton = page.getByTestId('clear-complete')
     this.emptyState = page.getByTestId('empty-state')
   }
 
